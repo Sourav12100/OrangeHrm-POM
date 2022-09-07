@@ -1,18 +1,17 @@
 package Test;
 
-import Pages.PageFactory;
+import org.testng.annotations.Test;
 
 public class LoginTest extends BaseClass {
-    public static void main(String[] args) throws InterruptedException {
-        setup();
+    @Test
+
+    public void LoginTest() throws InterruptedException{
         pageFactory.getLoginPage().login();
         pageFactory.getMenu().menu();
         pageFactory.getAdduser().start();
         pageFactory.getAddUserDetails().User();
+        pageFactory.getAdminUserRegistration();
 
-    }
-    public void close(){
-        driver.close();
     }
 }
 

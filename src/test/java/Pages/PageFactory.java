@@ -12,6 +12,8 @@ public class PageFactory {
 
     private AddUserDetails adduserdetails;
 
+    private AdminUserRegistration AdminUserRegistration;
+
     public PageFactory(LoginPage loginPage) {
         this.loginPage = loginPage;
     }
@@ -30,6 +32,9 @@ public class PageFactory {
     }
 
     public PageFactory(AddUserDetails adduserdetails) {
+        this.driver = driver;
+    }
+    public  PageFactory(AdminUserRegistration AdminUserRegistration){
         this.driver = driver;
     }
 
@@ -59,6 +64,14 @@ public class PageFactory {
             adduserdetails = new AddUserDetails(driver);
         }
         return adduserdetails;
+    }
+
+    public AdminUserRegistration getAdminUserRegistration()
+    {
+        if (AdminUserRegistration == null) {
+            AdminUserRegistration = new AdminUserRegistration(driver);
+        }
+        return AdminUserRegistration;
     }
 
 }
