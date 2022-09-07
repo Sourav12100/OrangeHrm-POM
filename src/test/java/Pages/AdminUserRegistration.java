@@ -19,7 +19,7 @@ public class AdminUserRegistration {
    }
     public void UserVerification(){
 
-      driver.findElement(userName).sendKeys("qazws ");
+      driver.findElement(userName).sendKeys("qeadz ");
       driver.findElement(userRole).click();
       driver.findElement(employeeName).sendKeys("Lisa");
       driver.findElement(Status).click();

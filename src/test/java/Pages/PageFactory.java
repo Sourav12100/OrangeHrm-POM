@@ -14,6 +14,8 @@ public class PageFactory {
 
     private AdminUserRegistration AdminUserRegistration;
 
+    private LeavePage LeavePage;
+
     public PageFactory(LoginPage loginPage) {
         this.loginPage = loginPage;
     }
@@ -35,6 +37,10 @@ public class PageFactory {
         this.driver = driver;
     }
     public  PageFactory(AdminUserRegistration AdminUserRegistration){
+        this.driver = driver;
+    }
+
+    public PageFactory(LeavePage LeavePage){
         this.driver = driver;
     }
 
@@ -74,4 +80,11 @@ public class PageFactory {
         return AdminUserRegistration;
     }
 
+    public LeavePage getLeavePage()
+    {
+        if (LeavePage == null) {
+            LeavePage = new LeavePage(driver);
+        }
+        return LeavePage;
+    }
 }

@@ -42,7 +42,7 @@ public class AddUserDetails
         driver.findElement(employeeName).sendKeys("Lisa");
         Thread.sleep(3000);
         driver.findElement(By.xpath("//*[contains(text(),'Lisa')]")).click();
-        driver.findElement(userName).sendKeys("qazws");
+        driver.findElement(userName).sendKeys("qeadz");
         driver.findElement(confirmPassword).sendKeys("Admin123#");
         Thread.sleep(3000);
         driver.findElement(Save).click();

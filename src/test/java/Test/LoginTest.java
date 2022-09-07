@@ -10,7 +10,8 @@ public class LoginTest extends BaseClass {
         pageFactory.getMenu().menu();
         pageFactory.getAdduser().start();
         pageFactory.getAddUserDetails().User();
-        pageFactory.getAdminUserRegistration();
+        pageFactory.getAdminUserRegistration().UserVerification();
+        pageFactory.getLeavePage().LeaveVerification();
 
     }
 }
