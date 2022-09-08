@@ -13,14 +13,14 @@ public class BaseClass {
     static WebDriver driver;
     protected static PageFactory pageFactory;
 
-//@BeforeClass
-//    public static void setup(){
-//        driver=new ChromeDriver();
-//        System.setProperty("WebDriver.chrome.driver","chromedriver.exe");
-//        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-//        pageFactory=new PageFactory(driver);
-//
-//    }
+@BeforeClass
+    public static void setup(){
+        driver=new ChromeDriver();
+        System.setProperty("WebDriver.chrome.driver","chromedriver.exe");
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        pageFactory=new PageFactory(driver);
+
+    }
     @Parameters("browserName")
     @BeforeClass
     public static void setup(String browserName) {
